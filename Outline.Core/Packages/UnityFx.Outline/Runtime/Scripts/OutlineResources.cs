@@ -495,7 +495,7 @@ namespace UnityFx.Outline
 		/// </summary>
 		public static void LogSrpNotSupported(UnityEngine.Object obj)
 		{
-			if (GraphicsSettings.renderPipelineAsset)
+			if (GraphicsSettings.defaultRenderPipeline)
 			{
 				UnityEngine.Debug.LogWarningFormat(obj, SrpNotSupported, obj.GetType().Name);
 			}
