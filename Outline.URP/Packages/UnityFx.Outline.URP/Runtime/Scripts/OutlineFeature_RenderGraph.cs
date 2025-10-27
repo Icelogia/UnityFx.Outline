@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering.RenderGraphModule;
@@ -196,10 +197,16 @@ namespace UnityFx.Outline.URP
 		            passData.RendererList = renderGraph.CreateRendererList(param);
 
 		            builder.SetRenderAttachment(outlineData.MaskTexture, 0);
-		            if (settings._outlineSettings.IsDepthTestingEnabled())
-		            {
-						builder.SetRenderAttachmentDepth(resourceData.activeDepthTexture);
-		            }
+
+		            // TODO: set depth buffer to an empty target when not using depth testing
+		            //if (settings._outlineSettings.IsDepthTestingEnabled())
+		            //{
+					//	builder.SetRenderAttachmentDepth(resourceData.activeDepthTexture);
+		            //}
+		            //else
+		            //{
+			        //    builder.SetRenderAttachmentDepth(???);
+		            //}
 		            builder.UseRendererList(passData.RendererList);
 
 		            builder.SetRenderFunc((PassData data, RasterGraphContext context)
