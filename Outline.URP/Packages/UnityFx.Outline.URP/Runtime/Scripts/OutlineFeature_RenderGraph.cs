@@ -55,6 +55,9 @@ namespace UnityFx.Outline.URP
 
 	    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
 	    {
+		    if (!settings._outlineResources)
+			    return;
+
 		    if (!settings._outlineResources.OutlineMaterial)
 			    return;
 
@@ -196,13 +199,14 @@ namespace UnityFx.Outline.URP
 		            var param = new RendererListParams(renderingData.cullResults, drawingSettings, filteringSettings);
 		            passData.RendererList = renderGraph.CreateRendererList(param);
 
+		            builder.UseTexture(resourceData.activeDepthTexture);
 		            builder.SetRenderAttachment(outlineData.MaskTexture, 0);
 
 		            // TODO: set depth buffer to an empty target when not using depth testing
-		            //if (settings._outlineSettings.IsDepthTestingEnabled())
-		            //{
-					//	builder.SetRenderAttachmentDepth(resourceData.activeDepthTexture);
-		            //}
+		            if (settings._outlineSettings.IsDepthTestingEnabled())
+		            {
+						//builder.SetRenderAttachmentDepth(resourceData.activeDepthTexture, AccessFlags.Read);
+		            }
 		            //else
 		            //{
 			        //    builder.SetRenderAttachmentDepth(???);
