@@ -22,6 +22,7 @@ MonoBehaviour:
       _outlineMode: 1
     _name: 
     _enabled: 1
+    _mergeLayerObjects: 0
   - _settings:
       _outlineSettings: {fileID: 0}
       _outlineColor: {r: 0, g: 1, b: 0.060156345, a: 1}
@@ -31,5 +32,5 @@ MonoBehaviour:
       _outlineMode: 1
     _name: 
     _enabled: 1
-  _layerMask: 2
-  _mergeLayerObjects: 0
+    _mergeLayerObjects: 0
+  _ignoreLayerMask: 0
