@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
-  m_Name: UniversalRenderPipelineAsset_Renderer
+  m_Name: UniversalRenderPipelineAsset_OutlineEffect
   m_EditorClassIdentifier: 
   debugShaders:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
@@ -26,10 +26,11 @@ MonoBehaviour:
     probeSamplingDebugMesh: {fileID: 0}
     probeSamplingDebugTexture: {fileID: 0}
     probeVolumeBlendStatesCS: {fileID: 0}
-  m_RendererFeatures: []
-  m_RendererFeatureMap: 
+  m_RendererFeatures:
+  - {fileID: 7565023294640092463}
+  m_RendererFeatureMap: 2ff593f29a5cfc68
   m_UseNativeRenderPass: 0
-  xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
+  xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   m_AssetVersion: 3
   m_PrepassLayerMask:
@@ -56,3 +57,34 @@ MonoBehaviour:
   m_DepthTextureFormat: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &7565023294640092463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db30f2944dcd710d8cb4c8896fb5f0f, type: 3}
+  m_Name: OutlineFeature_RenderGraph
+  m_EditorClassIdentifier: UnityFx.Outline.URP::UnityFx.Outline.URP.OutlineFeature_RenderGraph
+  m_Active: 1
+  settings:
+    _outlineResources: {fileID: 11400000, guid: 774da27de1d8a9f43b0069f98a98731c,
+      type: 2}
+    _outlineLayers: {fileID: 11400000, guid: c76515d7a1e08ec41bed77178ef1c764, type: 2}
+    _outlineSettings:
+      _outlineSettings: {fileID: 0}
+      _outlineColor: {r: 1, g: 0, b: 0, a: 1}
+      _outlineWidth: 31
+      _outlineIntensity: 11.8
+      _outlineAlphaCutoff: 0.789
+      _outlineMode: -1
+      _filterMode: 0
+      _layerMask:
+        serializedVersion: 2
+        m_Bits: 256
+      _renderingLayerMask: 1
+    _renderPassEvent: 400
+    _shaderPassNames: []
