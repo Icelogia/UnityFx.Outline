@@ -37,12 +37,12 @@ namespace UnityFx.Outline
 
 			EditorGUI.BeginChangeCheck();
 
-			var mask = EditorGUILayout.MaskField("Ignore layers", _layers.IgnoreLayerMask, InternalEditorUtility.layers);
+			var mask = EditorGUILayout.MaskField("Ignore layers", LayerMaskToDisplayMask(_layers.IgnoreLayerMask), InternalEditorUtility.layers);
 
 			if (EditorGUI.EndChangeCheck())
 			{
 				Undo.RecordObject(_layers, "Change ignore mask");
-				_layers.IgnoreLayerMask = mask;
+				_layers.IgnoreLayerMask = DisplayMaskToLayerMask(mask);
 			}
 
 			EditorGUILayout.Space();
@@ -209,6 +209,35 @@ namespace UnityFx.Outline
 			EditorUtility.SetDirty(_layers);
 
 			_layers.RemoveAt(index);
+		}
+
+		private static int LayerMaskToDisplayMask(int layerMask)
+		{
+			int displayMask = 0;
+			var layers = InternalEditorUtility.layers;
+			for (int i = 0; i < layers.Length; i++)
+			{
+				int layerIndex = UnityEngine.LayerMask.NameToLayer(layers[i]);
+				if (layerIndex >= 0 && (layerMask & (1 << layerIndex)) != 0)
+					displayMask |= 1 << i;
+			}
+			return displayMask;
+		}
+
+		private static int DisplayMaskToLayerMask(int displayMask)
+		{
+			int mask = 0;
+			var layers = InternalEditorUtility.layers;
+			for (int i = 0; i < layers.Length; i++)
+			{
+				if ((displayMask & (1 << i)) != 0)
+				{
+					int layerIndex = LayerMask.NameToLayer(layers[i]);
+					if (layerIndex >= 0)
+						mask |= 1 << layerIndex;
+				}
+			}
+			return mask;
 		}
 	}
 }

@@ -14,20 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityFx.Outline.URP::UnityFx.Outline.URP.OutlineFeature_RenderGraph
   m_Active: 1
   settings:
-    _outlineResources: {fileID: 11400000, guid: 8e16a58b2a5025b4eb00b60e2031eb4b,
-      type: 2}
-    _outlineLayers: {fileID: 0}
-    _outlineSettings:
+    OutlineResources: {fileID: 11400000, guid: 8e16a58b2a5025b4eb00b60e2031eb4b, type: 2}
+    OutlineLayers: {fileID: 0}
+    OutlineSettings:
       _outlineSettings: {fileID: 0}
-      _outlineColor: {r: 0.018987417, g: 1, b: 0, a: 1}
-      _outlineWidth: 9
+      _outlineColor: {r: 1, g: 0, b: 0, a: 1}
+      _outlineWidth: 4
       _outlineIntensity: 2
       _outlineAlphaCutoff: 0.9
       _outlineMode: 0
-      _filterMode: 1
+      _filterMode: 0
       _layerMask:
         serializedVersion: 2
-        m_Bits: 512
+        m_Bits: 0
       _renderingLayerMask: 1
     _renderPassEvent: 400
     _shaderPassNames: []
@@ -103,20 +102,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityFx.Outline.URP::UnityFx.Outline.URP.OutlineFeature_RenderGraph
   m_Active: 1
   settings:
-    _outlineResources: {fileID: 11400000, guid: de40adaaeb4c6894bbaf11be6f179400,
-      type: 2}
-    _outlineLayers: {fileID: 11400000, guid: c76515d7a1e08ec41bed77178ef1c764, type: 2}
-    _outlineSettings:
+    OutlineResources: {fileID: 11400000, guid: de40adaaeb4c6894bbaf11be6f179400, type: 2}
+    OutlineLayers: {fileID: 0}
+    OutlineSettings:
       _outlineSettings: {fileID: 0}
       _outlineColor: {r: 1, g: 0, b: 0, a: 1}
-      _outlineWidth: 31
-      _outlineIntensity: 11.8
-      _outlineAlphaCutoff: 0.789
-      _outlineMode: -1
+      _outlineWidth: 4
+      _outlineIntensity: 2
+      _outlineAlphaCutoff: 0.9
+      _outlineMode: 0
       _filterMode: 1
       _layerMask:
         serializedVersion: 2
-        m_Bits: 256
+        m_Bits: 0
       _renderingLayerMask: 1
     _renderPassEvent: 400
     _shaderPassNames: []

@@ -21,7 +21,7 @@ MonoBehaviour:
       _outlineAlphaCutoff: 0.9
       _outlineMode: 1
     _name: Layer1
-    _enabled: 0
+    _enabled: 1
     _mergeLayerObjects: 0
   - _settings:
       _outlineSettings: {fileID: 0}
@@ -31,6 +31,6 @@ MonoBehaviour:
       _outlineAlphaCutoff: 0.9
       _outlineMode: 6
     _name: Layer2
-    _enabled: 0
+    _enabled: 1
     _mergeLayerObjects: 0
   _ignoreLayerMask: 0
