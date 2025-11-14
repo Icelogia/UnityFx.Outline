@@ -1,5 +1,8 @@
 # UnityFx.Outline
 
+## Update info
+This reporitory is used to adjust outline package to the new RenderGraph in URP that has been added in unity 6.
+
 Channel | UnityFx.Outline |
 --------|-----------------|
 Github | [![GitHub release](https://img.shields.io/github/release/Arvtesh/UnityFx.Outline.svg?logo=github)](https://github.com/Arvtesh/UnityFx.Outline/releases)
