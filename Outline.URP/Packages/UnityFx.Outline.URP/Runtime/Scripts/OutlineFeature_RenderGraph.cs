@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -165,7 +165,7 @@ namespace UnityFx.Outline.URP
 		            passData.OutlineResources = settings._outlineResources;
 		            passData.OutlineSettings = settings._outlineSettings;
 
-		            var outlineData = frameData.Create<OutlineData>();
+		            var outlineData = frameData.GetOrCreate<OutlineData>();
 		            var resourceData = frameData.Get<UniversalResourceData>();
 		            var cameraData = frameData.Get<UniversalCameraData>();
 		            var lightData = frameData.Get<UniversalLightData>();
