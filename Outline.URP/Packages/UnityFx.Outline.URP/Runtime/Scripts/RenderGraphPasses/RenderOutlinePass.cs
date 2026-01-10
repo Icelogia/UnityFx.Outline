@@ -8,9 +8,9 @@ namespace UnityFx.Outline.URP
 {
 	class RenderOutlinesPass : ScriptableRenderPass
 	{
-		private readonly OutlineFeature_RenderGraphSettings settings;
+		private readonly OutlineFeature_Layers_RenderGraphSettings settings;
 
-		public RenderOutlinesPass(OutlineFeature_RenderGraphSettings settings)
+		public RenderOutlinesPass(OutlineFeature_Layers_RenderGraphSettings settings)
 		{
 			this.settings = settings;
 		}
