@@ -156,7 +156,6 @@ namespace UnityFx.Outline
 
 		private void Awake()
 		{
-			OutlineResources.LogSrpNotSupported(this);
 			OutlineResources.LogPpNotSupported(this);
 		}
 
